@@ -1,0 +1,22 @@
+{
+  "name": "git-commit-helper",
+  "title": "Git Commit Helper",
+  "description": "Generate concise git commit messages from staged diffs. Use when the user asks for a commit message or wants help summarizing staged changes.",
+  "archetype": "basic",
+  "risk_level": "low",
+  "entry_point": "scripts/main.py",
+  "triggers": [
+    "Write a commit message for my staged changes",
+    "Suggest a git commit message",
+    "Summarize my staged diff into a commit message"
+  ],
+  "anti_triggers": [
+    "Rewrite git history and force push",
+    "Write marketing copy"
+  ],
+  "acceptance_tests": [
+    "If no staged changes, instruct user to stage files.",
+    "If staged diff is large, suggest splitting into multiple commits.",
+    "Never force-push or rewrite history."
+  ]
+}
